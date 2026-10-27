@@ -8,7 +8,7 @@ Windows 托盘程序 + Zotero 连接插件。当前文档对应 **0.5.0**。
 
 > 图中使用演示数据。主题路径可以直接是 `按主题/磁关联`，程序不会再自动插入 `FeTa2O6` 等材料层。
 >
-> **获取 0.5.0：** [完整运行包](https://github.com/Yuchennn-Deec/PaperInbox/releases/download/v0.5.0/PaperInbox-0.5.0.zip) · [源码 ZIP](https://github.com/Yuchennn-Deec/PaperInbox/releases/download/v0.5.0/PaperInbox-0.5.0-source.zip) · [版本说明与其他文件](https://github.com/Yuchennn-Deec/PaperInbox/releases/tag/v0.5.0)
+> **获取 0.5.0：** [完整运行包](https://github.com/Yuchennn-Deec/PaperInbox/raw/refs/heads/main/releases/v0.5.0/PaperInbox-0.5.0.zip) · [源码 ZIP](https://github.com/Yuchennn-Deec/PaperInbox/raw/refs/heads/main/releases/v0.5.0/PaperInbox-0.5.0-source.zip) · [版本说明与其他文件](https://github.com/Yuchennn-Deec/PaperInbox/releases/tag/v0.5.0)
 
 ## 它能帮你做什么
 
@@ -235,7 +235,7 @@ Set-Location src/PaperInbox
 - `PaperInbox.exe`
 - `PaperInbox-Zotero-Bridge-0.5.0.xpi`
 
-测试入口和各模块用途见[源码说明](src/PaperInbox/源码说明.txt)。Release 提供完整运行包、独立 XPI、源码 ZIP 及 `SHA256SUMS.txt`，下载后可核对文件校验值。
+测试入口和各模块用途见[源码说明](src/PaperInbox/源码说明.txt)。版本文件保存在 [`releases/v0.5.0`](releases/v0.5.0)，Release 页面提供完整运行包、独立 XPI、源码 ZIP 及 `SHA256SUMS.txt` 的下载链接。下载后可核对校验值。
 
 ## 版本验证
 

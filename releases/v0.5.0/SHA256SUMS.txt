@@ -1,0 +1,3 @@
+c277d67c9dc71f6dfdac7201af3bdecc50eb55a271b94dc30276b7659a4778c5  PaperInbox-0.5.0-source.zip
+b871feb16832d00cf2912cfd48ac829cd45c42158cbef7b47884c7612d3ad014  PaperInbox-0.5.0.zip
+ba659fa9b242f59017509fcd3df3cc9571d02e0627ffa8faa5e6f490c6972378  PaperInbox-Zotero-Bridge-0.5.0.xpi
