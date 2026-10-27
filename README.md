@@ -8,7 +8,7 @@ Windows 托盘程序 + Zotero 连接插件。当前文档对应 **0.5.0**。
 
 > 图中使用演示数据。主题路径可以直接是 `按主题/磁关联`，程序不会再自动插入 `FeTa2O6` 等材料层。
 >
-> 本仓库目前提供 README 和界面截图；0.5.0 运行包与源码尚未发布到 GitHub Releases。
+> **获取 0.5.0：** [完整运行包](https://github.com/Yuchennn-Deec/PaperInbox/releases/download/v0.5.0/PaperInbox-0.5.0.zip) · [源码 ZIP](https://github.com/Yuchennn-Deec/PaperInbox/releases/download/v0.5.0/PaperInbox-0.5.0-source.zip) · [版本说明与其他文件](https://github.com/Yuchennn-Deec/PaperInbox/releases/tag/v0.5.0)
 
 ## 它能帮你做什么
 
@@ -182,7 +182,7 @@ API 返回的有效完整路径优先采用，程序只校验路径格式，不�
 - 本机连接使用回环地址和认证令牌，程序通过 Zotero 接口归档，不直接写 SQLite。
 - 同内容 PDF 入库时会查找并复用已有附件；相同 DOI 的候选记录会标记核对，不自动合并不同文献。
 
-本地配置目录为 `%LOCALAPPDATA%\PaperInbox`。配置文件、密钥、正式文库、真实下载论文和处理历史不在本次 GitHub 上传内容中。
+本地配置目录为 `%LOCALAPPDATA%\PaperInbox`。仓库及发布包不包含本地配置、真实密钥、正式文库、真实下载论文或个人处理历史。
 
 ## 常见问题
 
@@ -205,6 +205,37 @@ API 返回的有效完整路径优先采用，程序只校验路径格式，不�
 **关闭主窗口后还会提醒吗？**
 
 会。主窗口关闭后继续在托盘运行；要完全退出，请从托盘菜单退出程序。
+
+## 源码与本机构建
+
+本仓库公开 0.5.0 源码，入口位于 [`src/PaperInbox`](src/PaperInbox)。源码 ZIP 与运行包对应同一版本。
+
+```text
+PaperInbox/
+├─ README.md
+├─ docs/images/                 # 图文指南配图
+└─ src/PaperInbox/
+   ├─ build.ps1                 # 构建 Windows EXE 与 Zotero XPI
+   ├─ AiClient.cs               # API 与分类 Prompt
+   ├─ PromptRouting.cs          # 完整路径校验与采用
+   ├─ ReviewForm.cs             # 分类核对窗口
+   ├─ Design.cs                 # 输入控件与界面绘制
+   └─ zotero-bridge/            # Zotero 连接插件
+```
+
+在 Windows PowerShell 中进入项目目录并执行：
+
+```powershell
+Set-Location src/PaperInbox
+.\build.ps1
+```
+
+使用系统 .NET Framework C# 编译器构建，无 NuGet 依赖。生成文件位于 `src/PaperInbox/dist/`：
+
+- `PaperInbox.exe`
+- `PaperInbox-Zotero-Bridge-0.5.0.xpi`
+
+测试入口和各模块用途见[源码说明](src/PaperInbox/源码说明.txt)。Release 提供完整运行包、独立 XPI、源码 ZIP 及 `SHA256SUMS.txt`，下载后可核对文件校验值。
 
 ## 版本验证
 

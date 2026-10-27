@@ -1,0 +1,10 @@
+**/dist/
+**/ui-build/
+**/bin/
+**/obj/
+**/api-settings.json
+**/bridge.json
+**/state.json
+**/state.json.*
+**/zotero.sqlite*
+**/test-output/

@@ -1,0 +1,23 @@
+﻿论文收件箱 0.5.0 源码
+
+Windows PowerShell执行build.ps1，使用系统.NET Framework C#编译器，不依赖NuGet。
+输出dist/PaperInbox.exe和dist/PaperInbox-Zotero-Bridge-0.5.0.xpi。
+
+AiClient.cs / AiSettings.cs：三种API协议、每服务商Prompt、默认双分类规则及固定输出契约。
+PromptRouting.cs：采用API返回的完整collections路径、格式校验、无效路径保留分析供核对。
+DualClassification.cs：可选材料助手的通式及平面主题路径，不按材料重复生成主题目录。
+FormulaCatalog.cs / MaterialThemes.cs：材料证据、默认回退、旧分析迁移与历史分类。
+ReviewForm.cs：通用Prompt路径核对、可选材料助手、自适应分栏及滚动区域。
+Design.cs：圆角背景重绘、居中的原生输入控件、窗口尺寸和通用绘制。
+ApiSettingsForm.cs / MaterialHistoryForm.cs：可编辑规则、历史分类与筛选。
+TrayCore.cs / TrayApp.cs / DownloadMonitor.cs：状态、确认、下载监测和入库调度。
+BridgeClient.cs / zotero-bridge：本机认证、目录读取、PDF提取、确认入库及附件查重；不直接写SQLite。
+classificationVersion沿用旧兼容标识；routingVersion区分Prompt路径与材料助手，不能仅靠旧字段名判断用户学科。
+
+验证
+PaperInbox.exe --self-test <新的绝对测试目录> 运行本机模拟API、下载与状态逻辑、界面绘制测试。
+node bridge-tests.cjs <结果JSON路径> 使用Node内置模块验证桥接组件。
+verification-tools/prompt_interactions.cs及layout_checks.cs为独立WinForms测试程序，需引用构建后的PaperInbox.exe。
+它们使用当前目录下同名程序集；测试时将PaperInbox.exe与测试程序置于同一目录，并传入新的测试输出目录。
+PromptIntegrationDriver.cs用于独立Zotero测试配置，需另备测试PDF和模拟API响应，不应指向正式文库。
+本包验证记录列出实际独立测试结果；私人配置、测试文库、真实PDF与临时构建不随源码分发。

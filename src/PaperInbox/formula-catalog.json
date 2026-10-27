@@ -1,0 +1,349 @@
+{
+  "version": "chemical-formula-v1",
+  "root": "按化学通式",
+  "families": [
+    {
+      "code": "pyroxene",
+      "formula": "AMX2O6",
+      "name": "AMX2O6（辉石）",
+      "definition": "A、M为金属位，X主要为Si或Ge；区分单一化合物、固溶系列与体系比较。"
+    },
+    {
+      "code": "garnet",
+      "formula": "A3B2(XO4)3",
+      "name": "A3B2(XO4)3（石榴石）",
+      "definition": "A、B、X分别表示八、六、四配位阳离子位；Mn3Al2Ge3O12等与通式综述分开。"
+    },
+    {
+      "code": "spinel",
+      "formula": "AB2O4",
+      "name": "AB2O4（同计量比氧化物）",
+      "definition": "库中主要为尖晶石；也包含BaGa2O4等同计量比材料，不据此断言结构相同。Ni2GeO4可写为GeNi2O4。"
+    },
+    {
+      "code": "lispinel",
+      "formula": "Li2MM′3O8",
+      "name": "Li2MM′3O8（复合锂尖晶石）",
+      "definition": "M=Mg、Co、Ni、Zn等，M′=Ti、Ge；保留此有序复合通式，不简化掉Li或取代元素。"
+    },
+    {
+      "code": "melilite",
+      "formula": "A2MX2O7",
+      "name": "A2MX2O7（黄长石）",
+      "definition": "A=Ca、Sr、Ba等，M为过渡金属，X=Si、Ge。"
+    },
+    {
+      "code": "tellurite",
+      "formula": "A2M2TeO6",
+      "name": "A2M2TeO6（蜂窝碲酸盐）",
+      "definition": "本库主要为Na2Co2TeO6与Na2Ni2TeO6。"
+    },
+    {
+      "code": "bismuthate",
+      "formula": "A3M2BiO6",
+      "name": "A3M2BiO6（蜂窝铋酸盐）",
+      "definition": "本库为Na3Ni2BiO6；与A2M2TeO6分列，保留不同化学计量。"
+    },
+    {
+      "code": "thiophosphate",
+      "formula": "MPX3",
+      "name": "MPX3（层状硫代磷酸盐）",
+      "definition": "M为过渡金属，X为硫族元素；本库实际研究Ni1−xMnxPS3固溶系列。"
+    },
+    {
+      "code": "oxycarbonate",
+      "formula": "Ba3Co2O6(CO3)x",
+      "name": "Ba3Co2O6(CO3)x（钴氧碳酸盐）",
+      "definition": "按原文变组分通式保留碳酸根与x，区分0.60、0.6、0.7等具体组成。"
+    },
+    {
+      "code": "ba8",
+      "formula": "Ba8Co7O21",
+      "name": "Ba8Co7O21（链状钴氧化物）",
+      "definition": "原文研究Ba8Co7O21及(Ba3Co2O6)α(Ba3Co3O9)β多型系列；不与氧碳酸盐混为同一通式。"
+    },
+    {
+      "code": "chain4",
+      "formula": "A4M2M′O9",
+      "name": "A4M2M′O9（链状氧化物）",
+      "definition": "正文对应Sr4−xCaxMn2CoO9，x=0、2。"
+    },
+    {
+      "code": "chain3",
+      "formula": "A3MM′O6",
+      "name": "A3MM′O6（链状复合氧化物）",
+      "definition": "本库为Ca3CoIrO6。"
+    },
+    {
+      "code": "niobate",
+      "formula": "AB2O6",
+      "name": "AB2O6（铌钽酸盐）",
+      "definition": "本库为NiNb2O6、Co(NbxTa1−x)2O6；不同于AMX2O6辉石。"
+    },
+    {
+      "code": "selenite",
+      "formula": "MSe2O5",
+      "name": "MSe2O5（亚硒酸盐）",
+      "definition": "本库为CoSe2O5。"
+    },
+    {
+      "code": "te18",
+      "formula": "AM2C6Te3O18",
+      "name": "AM2C6Te3O18（五元金属碲氧化物）",
+      "definition": "A=Pb、Sr，M=Mn、Cd，C=Ni、Co等；此处C是通式占位符，不是碳元素。"
+    },
+    {
+      "code": "borophosphate3",
+      "formula": "M3BPO7",
+      "name": "M3BPO7（硼磷酸盐）",
+      "definition": "本库为Co3BPO7；B与P在此分别为硼和磷元素。"
+    },
+    {
+      "code": "borophosphate12",
+      "formula": "AM2BPO7",
+      "name": "AM2BPO7（复合硼磷酸盐）",
+      "definition": "本库为SrCo2BPO7；与M3BPO7分列。"
+    },
+    {
+      "code": "polar238",
+      "formula": "A2B3O8",
+      "name": "A2B3O8（极性复合氧化物）",
+      "definition": "本库为Fe2Mo3O8。"
+    },
+    {
+      "code": "m3te",
+      "formula": "M3TeO6",
+      "name": "M3TeO6（金属碲酸盐）",
+      "definition": "正文核实为Ni3TeO6。"
+    },
+    {
+      "code": "abo3",
+      "formula": "ABO3",
+      "name": "ABO3（同计量比氧化物）",
+      "definition": "按化学计量纳入钙钛矿、钛铁矿与链状偏锗酸盐等，子类保留结构或具体材料名。"
+    },
+    {
+      "code": "doubleperov",
+      "formula": "A2BB′O6",
+      "name": "A2BB′O6（双钙钛矿）",
+      "definition": "包括Sr2−xLaxFeSbO6与Sr2Ga1−xMnxSbO6；保留掺杂变量。"
+    },
+    {
+      "code": "tripleperov",
+      "formula": "A3BB′2O9",
+      "name": "A3BB′2O9（复合钙钛矿）",
+      "definition": "本库为Ba3NiNb2O9。"
+    },
+    {
+      "code": "rp",
+      "formula": "An+1BnO3n+1",
+      "name": "An+1BnO3n+1（Ruddlesden–Popper层状氧化物）",
+      "definition": "本库为La(n+1)Ni(n)O(3n+1)层状镍酸盐系列。"
+    },
+    {
+      "code": "oxyhydride",
+      "formula": "A4MM′O4H4",
+      "name": "A4MM′O4H4（氧氢化物）",
+      "definition": "正文为LaxSr4−xNiRuO4H4；同时保留La、Sr与掺杂变量。"
+    },
+    {
+      "code": "phosphate",
+      "formula": "A3Ln(PO4)2",
+      "name": "A3Ln(PO4)2（稀土磷酸盐）",
+      "definition": "本库为K3Ln(PO4)2，Ln=Yb、Gd。"
+    },
+    {
+      "code": "r2amo5",
+      "formula": "R2AMO5",
+      "name": "R2AMO5（稀土镍酸盐）",
+      "definition": "本库为Y2BaNiO5；R包含Y，A=Ba，M=Ni。"
+    },
+    {
+      "code": "disilicate",
+      "formula": "R2Si2O7",
+      "name": "R2Si2O7（稀土焦硅酸盐）",
+      "definition": "博士论文目录与正文研究D型Er2Si2O7，与石榴石主线同时归档。"
+    },
+    {
+      "code": "intermetal",
+      "formula": "R2TGe6",
+      "name": "R2TGe6（稀土金属间化合物）",
+      "definition": "本库为Gd2PdGe6。"
+    },
+    {
+      "code": "series14",
+      "formula": "M5−pT4+pO14",
+      "name": "M5−pT4+pO14（p=0或1的结构族）",
+      "definition": "原摘要明确给出M(5−p)T(4+p)O14结构族；Ca3Ga2Ge4O14等为p=0计量。"
+    },
+    {
+      "code": "intergrowth",
+      "formula": "M4n+6Ge2n+1O8(n+1)",
+      "name": "M4n+6Ge2n+1O8(n+1)（橄榄石与尖晶石相关结构族）",
+      "definition": "题名原式M=(Ni,Mg)，保留n变量，不凭关键词直接并入尖晶石。"
+    },
+    {
+      "code": "alloy",
+      "formula": "InxGa1−xAs",
+      "name": "InxGa1−xAs（III-V族合金）",
+      "definition": "InGaAs特准随机结构与点缺陷文献；不同标题大小写不作为不同材料。"
+    },
+    {
+      "code": "amphibole",
+      "formula": "AB2C5T8O22W2",
+      "name": "AB2C5T8O22W2（角闪石）",
+      "definition": "A可部分占据；B、C、T为晶体化学位，W为OH等阴离子位；依据gedrite摘要的位点式归类。"
+    },
+    {
+      "code": "carbon",
+      "formula": "C",
+      "name": "C（碳材料）",
+      "definition": "非晶碳纳米管，元素组成与形态分开描述。"
+    },
+    {
+      "code": "nonstoich",
+      "formula": "非单一通式",
+      "name": "非单一通式（玻璃与复合材料）",
+      "definition": "多组分玻璃或复合物不给出猜测的固定化学式。"
+    },
+    {
+      "code": "background",
+      "formula": "无特定化学通式",
+      "name": "无特定化学通式（综述、理论与方法）",
+      "definition": "通用物理、跨多体系综述及方法资料单列，不将引言或参考文献中的化合物当作主材料。"
+    },
+    {
+      "code": "review",
+      "formula": "待核对",
+      "name": "待核对（信息不足或附件缺失）",
+      "definition": "保留无法可靠识别的原记录；分类线索、缺失情况与待核对原因在明细中说明。"
+    },
+    {
+      "code": "monoxide",
+      "formula": "MO",
+      "name": "MO（二元氧化物）",
+      "definition": "按化学计量分组，具体材料保留独立子类，不据此断言晶体结构相同。"
+    },
+    {
+      "code": "dioxide",
+      "formula": "MO2",
+      "name": "MO2（二元氧化物）",
+      "definition": "按化学计量分组，具体材料保留独立子类，不据此断言晶体结构相同。"
+    },
+    {
+      "code": "sesquioxide",
+      "formula": "M2O3",
+      "name": "M2O3（二元氧化物）",
+      "definition": "按化学计量分组，具体材料保留独立子类，不据此断言晶体结构相同。"
+    },
+    {
+      "code": "abo2",
+      "formula": "ABO2",
+      "name": "ABO2（同计量比含氧化合物）",
+      "definition": "按化学计量分组，具体材料保留独立子类，不据此断言晶体结构相同。"
+    }
+  ],
+  "existingPaths": [
+    "按化学通式/A2B3O8（极性复合氧化物）/Fe2Mo3O8",
+    "按化学通式/A2BB′O6（双钙钛矿）/Sr2Ga1−xMnxSbO6",
+    "按化学通式/A2BB′O6（双钙钛矿）/Sr2−xLaxFeSbO6",
+    "按化学通式/A2M2TeO6（蜂窝碲酸盐）/Na2Co2TeO6",
+    "按化学通式/A2M2TeO6（蜂窝碲酸盐）/Na2Ni2TeO6",
+    "按化学通式/A2MX2O7（黄长石）/A2CoSi2O7（A=Ca,Sr,Ba）",
+    "按化学通式/A2MX2O7（黄长石）/Ba2CoGe2O7",
+    "按化学通式/A2MX2O7（黄长石）/Sr2MGe2O7（M=Mn,Co）",
+    "按化学通式/A3B2(XO4)3（石榴石）/AgCa2M2V3O12（M=Co,Ni）",
+    "按化学通式/A3B2(XO4)3（石榴石）/Ca3(Al,Sc)2Ge3O12及Cr掺杂",
+    "按化学通式/A3B2(XO4)3（石榴石）/Gd3Ga5O12与Gd3Al5O12",
+    "按化学通式/A3B2(XO4)3（石榴石）/Mn3Al2Ge3O12",
+    "按化学通式/A3B2(XO4)3（石榴石）/Mn3Al2Ge3O12与Mn3Al2Si3O12",
+    "按化学通式/A3B2(XO4)3（石榴石）/Mn3Cr2Ge3O12",
+    "按化学通式/A3B2(XO4)3（石榴石）/Mn3Fe2Ge3O12",
+    "按化学通式/A3B2(XO4)3（石榴石）/Mn3V2Ge3O12",
+    "按化学通式/A3B2(XO4)3（石榴石）/MnCrG–MnFeG固溶系列",
+    "按化学通式/A3B2(XO4)3（石榴石）/石榴石与尖晶石比较",
+    "按化学通式/A3B2(XO4)3（石榴石）/通式综述与系列比较",
+    "按化学通式/A3BB′2O9（复合钙钛矿）/Ba3NiNb2O9",
+    "按化学通式/A3Ln(PO4)2（稀土磷酸盐）/K3Ln(PO4)2（Ln=Yb,Gd）",
+    "按化学通式/A3M2BiO6（蜂窝铋酸盐）/Na3Ni2BiO6",
+    "按化学通式/A3MM′O6（链状复合氧化物）/Ca3CoIrO6",
+    "按化学通式/A4M2M′O9（链状氧化物）/Sr4−xCaxMn2CoO9",
+    "按化学通式/A4MM′O4H4（氧氢化物）/LaxSr4−xNiRuO4H4",
+    "按化学通式/AB2C5T8O22W2（角闪石）/Gedrite及角闪石结构比较",
+    "按化学通式/AB2O4（同计量比氧化物）/BaGa2O4",
+    "按化学通式/AB2O4（同计量比氧化物）/Co2GeO4与Ni2GeO4",
+    "按化学通式/AB2O4（同计量比氧化物）/CoGa2O4",
+    "按化学通式/AB2O4（同计量比氧化物）/Ni2GeO4",
+    "按化学通式/AB2O4（同计量比氧化物）/石榴石与尖晶石比较",
+    "按化学通式/AB2O4（同计量比氧化物）/锗酸盐与硅酸盐尖晶石比较",
+    "按化学通式/AB2O6（铌钽酸盐）/Co(NbxTa1−x)2O6",
+    "按化学通式/AB2O6（铌钽酸盐）/NiNb2O6",
+    "按化学通式/ABO3（同计量比氧化物）/CuGeO3（链状偏锗酸盐）",
+    "按化学通式/ABO3（同计量比氧化物）/GdVO3（钙钛矿）",
+    "按化学通式/ABO3（同计量比氧化物）/MnTiO3（钛铁矿型）",
+    "按化学通式/ABO3（同计量比氧化物）/PMN–PT固溶体",
+    "按化学通式/AM2BPO7（复合硼磷酸盐）/SrCo2BPO7",
+    "按化学通式/AM2C6Te3O18（五元金属碲氧化物）/AM2C6Te3O18系列比较",
+    "按化学通式/AM2C6Te3O18（五元金属碲氧化物）/PbMn2Ni6Te3O18",
+    "按化学通式/AM2C6Te3O18（五元金属碲氧化物）/SrMn2Ni6Te3O18",
+    "按化学通式/AMX2O6（辉石）/CaCoGe2O6与CaCoSi2O6",
+    "按化学通式/AMX2O6（辉石）/CaCuGe2O6",
+    "按化学通式/AMX2O6（辉石）/CaFeGe2O6",
+    "按化学通式/AMX2O6（辉石）/CaFeSi2O6–CaZnSi2O6固溶体",
+    "按化学通式/AMX2O6（辉石）/CaM(Si,Ge)2O6系列比较",
+    "按化学通式/AMX2O6（辉石）/CaMGe2O6（M=Mn,Fe,Co）",
+    "按化学通式/AMX2O6（辉石）/CaMSi2O6（M=Mg,Co,Ni,Mn,Zn）",
+    "按化学通式/AMX2O6（辉石）/CaMgGe2O6及Cr掺杂",
+    "按化学通式/AMX2O6（辉石）/CaMnGe2O6",
+    "按化学通式/AMX2O6（辉石）/CaMnSi2O6",
+    "按化学通式/AMX2O6（辉石）/CaNiSi2O6",
+    "按化学通式/AMX2O6（辉石）/CaZnSi2O6与CaZnGe2O6",
+    "按化学通式/AMX2O6（辉石）/Cu基辉石与链状结构比较",
+    "按化学通式/AMX2O6（辉石）/LiCrSi2O6",
+    "按化学通式/AMX2O6（辉石）/NaAlSi2O6–NaFeSi2O6–CaFeSi2O6固溶体",
+    "按化学通式/AMX2O6（辉石）/NaCrGe2O6与LiCrGe2O6",
+    "按化学通式/AMX2O6（辉石）/NaFeGe2O6与NaFeSi2O6",
+    "按化学通式/AMX2O6（辉石）/NaMGe2O6（M=Ga,Mn,Sc,In）",
+    "按化学通式/AMX2O6（辉石）/NaMnGe2O6",
+    "按化学通式/AMX2O6（辉石）/NaMnSi2O6",
+    "按化学通式/AMX2O6（辉石）/NaVGe2O6",
+    "按化学通式/AMX2O6（辉石）/NaVGe2O6与LiVGe2O6",
+    "按化学通式/AMX2O6（辉石）/SrCoGe2O6",
+    "按化学通式/AMX2O6（辉石）/SrCoSi2O6",
+    "按化学通式/AMX2O6（辉石）/SrMGe2O6（M=Mn,Co）",
+    "按化学通式/AMX2O6（辉石）/SrMnGe2O6",
+    "按化学通式/AMX2O6（辉石）/体系综述与Ca-Na系列比较",
+    "按化学通式/An+1BnO3n+1（Ruddlesden–Popper层状氧化物）/La(n+1)Ni(n)O(3n+1)",
+    "按化学通式/Ba3Co2O6(CO3)x（钴氧碳酸盐）/Ba3Co2O6(CO3)0.6",
+    "按化学通式/Ba3Co2O6(CO3)x（钴氧碳酸盐）/Ba3Co2O6(CO3)0.60",
+    "按化学通式/Ba3Co2O6(CO3)x（钴氧碳酸盐）/Ba3Co2O6(CO3)0.7",
+    "按化学通式/Ba8Co7O21（链状钴氧化物）/Ba8Co7O21及多型系列",
+    "按化学通式/C（碳材料）/非晶碳纳米管",
+    "按化学通式/InxGa1−xAs（III-V族合金）/InGaAs与中性点缺陷",
+    "按化学通式/Li2MM′3O8（复合锂尖晶石）/Li2ATi3O8（A=Mg,Zn）",
+    "按化学通式/Li2MM′3O8（复合锂尖晶石）/Li2MGe3O8（M=Ni,Zn）",
+    "按化学通式/Li2MM′3O8（复合锂尖晶石）/Li2MM′3O8通式与结构",
+    "按化学通式/Li2MM′3O8（复合锂尖晶石）/Li2NiGe3O8",
+    "按化学通式/M3BPO7（硼磷酸盐）/Co3BPO7",
+    "按化学通式/M3TeO6（金属碲酸盐）/Ni3TeO6",
+    "按化学通式/M4n+6Ge2n+1O8(n+1)（橄榄石与尖晶石相关结构族）/(Ni,Mg)4n+6Ge2n+1O8(n+1)",
+    "按化学通式/M5−pT4+pO14（p=0或1的结构族）/Ca3Ga2Ge4O14与Sr3Ga2Ge4O14",
+    "按化学通式/M5−pT4+pO14（p=0或1的结构族）/M5−pT4+pO14结构与系列",
+    "按化学通式/MPX3（层状硫代磷酸盐）/Ni1−xMnxPS3",
+    "按化学通式/MSe2O5（亚硒酸盐）/CoSe2O5",
+    "按化学通式/R2AMO5（稀土镍酸盐）/Y2BaNiO5",
+    "按化学通式/R2Si2O7（稀土焦硅酸盐）/D型Er2Si2O7",
+    "按化学通式/R2TGe6（稀土金属间化合物）/Gd2PdGe6",
+    "按化学通式/待核对（信息不足或附件缺失）/仅文件名给出CaNiGe2O6",
+    "按化学通式/待核对（信息不足或附件缺失）/网页记录缺少有效题名",
+    "按化学通式/待核对（信息不足或附件缺失）/附件缺失且材料未确认",
+    "按化学通式/无特定化学通式（综述、理论与方法）/凝聚态与量子自旋理论",
+    "按化学通式/无特定化学通式（综述、理论与方法）/实验、数据分析与量子控制方法",
+    "按化学通式/无特定化学通式（综述、理论与方法）/教材与热力学讲义",
+    "按化学通式/无特定化学通式（综述、理论与方法）/跨体系磁性综述与理论背景",
+    "按化学通式/非单一通式（玻璃与复合材料）/Na2O–Ga2O3–GeO2–SiO2玻璃",
+    "按化学通式/非单一通式（玻璃与复合材料）/Na2O–SiO2–Cu2O–CuO玻璃与熔体",
+    "按化学通式/非单一通式（玻璃与复合材料）/膨润土–钢渣复合吸附材料",
+    "按化学通式/MO（二元氧化物）/CuO"
+  ]
+}
