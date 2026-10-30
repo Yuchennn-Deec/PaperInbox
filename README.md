@@ -2,13 +2,15 @@
 
 **发现新 PDF，按你的 Prompt 分类，核对后放入 Zotero 并打开阅读。**
 
-Windows 托盘程序 + Zotero 连接插件。当前文档对应 **0.5.0**。
+Windows 托盘程序 + Zotero 连接插件。当前组合为 **EXE 0.5.0 + 连接插件 0.5.1**（Zotero 10 兼容更新）。
 
 ![按 Prompt 核对文献信息与分类路径](docs/images/review.png)
 
 > 图中使用演示数据。主题路径可以直接是 `按主题/磁关联`，程序不会再自动插入 `FeTa2O6` 等材料层。
 >
-> **获取 0.5.0：** [完整运行包](https://github.com/Yuchennn-Deec/PaperInbox/raw/refs/heads/main/releases/v0.5.0/PaperInbox-0.5.0.zip) · [源码 ZIP](https://github.com/Yuchennn-Deec/PaperInbox/raw/refs/heads/main/releases/v0.5.0/PaperInbox-0.5.0-source.zip) · [版本说明与其他文件](https://github.com/Yuchennn-Deec/PaperInbox/releases/tag/v0.5.0)
+> **Zotero 10.0.6 用户：** [下载 0.5.1 连接插件](https://github.com/Yuchennn-Deec/PaperInbox/raw/refs/heads/main/releases/v0.5.1/PaperInbox-Zotero-Bridge-0.5.1.xpi)，原 0.5.0 EXE 无需更换。
+>
+> **当前下载：** [完整运行包](https://github.com/Yuchennn-Deec/PaperInbox/raw/refs/heads/main/releases/v0.5.1/PaperInbox-0.5.1.zip) · [源码 ZIP](https://github.com/Yuchennn-Deec/PaperInbox/raw/refs/heads/main/releases/v0.5.1/PaperInbox-0.5.1-source.zip) · [更新说明与校验](releases/v0.5.1)
 
 ## 它能帮你做什么
 
@@ -40,8 +42,8 @@ flowchart LR
 | 项目 | 当前版本 |
 | --- | --- |
 | 桌面环境 | Windows，使用 .NET Framework 桌面运行环境。 |
-| Zotero | 连接插件支持 **9.0.x**，已在 **9.0.6** 独立测试库验证。 |
-| 程序组合 | `PaperInbox.exe` 与 `PaperInbox-Zotero-Bridge-0.5.0.xpi` 配套使用。 |
+| Zotero | 连接插件声明支持 **9.0–10.0.x**；0.5.1 已在 **10.0.6** 独立库验证。 |
+| 程序组合 | `PaperInbox.exe` 0.5.0 与 `PaperInbox-Zotero-Bridge-0.5.1.xpi` 配套使用。 |
 | 模型 | 自备 API 服务商、模型 ID 和密钥。 |
 | PDF | 需要可提取的文字；扫描件应先 OCR。 |
 
@@ -51,10 +53,10 @@ flowchart LR
 
 ### 1. 安装 Zotero 连接插件
 
-1. 将 0.5.0 运行包完整解压到固定文件夹，不要直接在 ZIP 中运行。
+1. 将当前运行包完整解压到固定文件夹，不要直接在 ZIP 中运行。
 2. 如果正在使用旧版，先从托盘退出旧论文收件箱。
 3. 打开 Zotero 的插件管理器，选择**从文件安装插件**。
-4. 选择 `PaperInbox-Zotero-Bridge-0.5.0.xpi`，按提示完成更新或重启。
+4. 选择 `PaperInbox-Zotero-Bridge-0.5.1.xpi`，按提示完成更新或重启。
 5. 启动同一运行包中的 `PaperInbox.exe`。
 
 ### 2. 配置 API 与模型
@@ -196,7 +198,7 @@ API 返回的有效完整路径优先采用，程序只校验路径格式，不�
 
 **Zotero 提示插件不兼容怎么办？**
 
-核对 Zotero 是否为 9.0.x，并使用同一包中的 0.5.0 EXE 与 XPI。当前插件版本没有声明兼容 Zotero 8。
+Zotero 10 请安装 0.5.1 连接插件，旧 0.5.0 插件只声明支持 Zotero 9，会被 10 禁用。新插件还适配了 PDF 提取接口变化；现有 0.5.0 EXE 无需更换。当前兼容声明为 9.0–10.0.x。
 
 **扫描件无法分析怎么办？**
 
@@ -208,7 +210,7 @@ API 返回的有效完整路径优先采用，程序只校验路径格式，不�
 
 ## 源码与本机构建
 
-本仓库公开 0.5.0 源码，入口位于 [`src/PaperInbox`](src/PaperInbox)。源码 ZIP 与运行包对应同一版本。
+本仓库公开当前组合源码（EXE 0.5.0、连接插件 0.5.1），入口位于 [`src/PaperInbox`](src/PaperInbox)。源码 ZIP 与运行包对应同一版本。
 
 ```text
 PaperInbox/
@@ -233,11 +235,13 @@ Set-Location src/PaperInbox
 使用系统 .NET Framework C# 编译器构建，无 NuGet 依赖。生成文件位于 `src/PaperInbox/dist/`：
 
 - `PaperInbox.exe`
-- `PaperInbox-Zotero-Bridge-0.5.0.xpi`
+- `PaperInbox-Zotero-Bridge-0.5.1.xpi`
 
-测试入口和各模块用途见[源码说明](src/PaperInbox/源码说明.txt)。版本文件保存在 [`releases/v0.5.0`](releases/v0.5.0)，Release 页面提供完整运行包、独立 XPI、源码 ZIP 及 `SHA256SUMS.txt` 的下载链接。下载后可核对校验值。
+测试入口和各模块用途见[源码说明](src/PaperInbox/源码说明.txt)。当前版本文件保存在 [`releases/v0.5.1`](releases/v0.5.1)，包含完整运行包、独立 XPI、源码 ZIP 及 `SHA256SUMS.txt`。历史 0.5.0 Release 保留。下载后可核对校验值。
 
 ## 版本验证
+
+**连接插件 0.5.1：** 2026-10-30 在 Zotero **10.0.6** 通过 **60 项检查**（17 项 Node、4 项桥接组件、23 项原生 Zotero、16 项客户端流程），覆盖原生安装、预览阶段不入库、真实 PDF 提取、Prompt 分类入库、目录与附件复用、自动打开及数据库完整性。测试使用原版 0.5.0 EXE。Zotero 9 的命令分支本轮通过回归测试。[验证记录](releases/v0.5.1/verification.json)。
 
 0.5.0 共通过 **265 项检查**：
 

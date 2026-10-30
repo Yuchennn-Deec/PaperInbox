@@ -1,7 +1,7 @@
-﻿论文收件箱 0.5.0 源码
+﻿论文收件箱源码：EXE 0.5.0 / Zotero连接插件 0.5.1
 
 Windows PowerShell执行build.ps1，使用系统.NET Framework C#编译器，不依赖NuGet。
-输出dist/PaperInbox.exe和dist/PaperInbox-Zotero-Bridge-0.5.0.xpi。
+输出dist/PaperInbox.exe和dist/PaperInbox-Zotero-Bridge-0.5.1.xpi。
 
 AiClient.cs / AiSettings.cs：三种API协议、每服务商Prompt、默认双分类规则及固定输出契约。
 PromptRouting.cs：采用API返回的完整collections路径、格式校验、无效路径保留分析供核对。
@@ -21,3 +21,9 @@ verification-tools/prompt_interactions.cs及layout_checks.cs为独立WinForms测
 它们使用当前目录下同名程序集；测试时将PaperInbox.exe与测试程序置于同一目录，并传入新的测试输出目录。
 PromptIntegrationDriver.cs用于独立Zotero测试配置，需另备测试PDF和模拟API响应，不应指向正式文库。
 本包验证记录列出实际独立测试结果；私人配置、测试文库、真实PDF与临时构建不随源码分发。
+
+Zotero10兼容修订
+插件兼容范围9.0至10.0.*，在10.0.6独立库验证。
+bridge.js按Zotero主版本选择PDF Worker命令：9使用getFulltext，10使用pdf.getFulltext。
+node --test zotero-bridge/tests/*.test.cjs 可运行17项组件及兼容回归测试。
+build.ps1从插件manifest.json读取XPI版本，EXE版本保持0.5.0。

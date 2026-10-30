@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "论文收件箱 · Zotero 连接",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "按自定义Prompt返回完整分类路径；默认提供化学通式和独立研究主题分类。",
   "author": "Personal Library Tools",
   "icons": {
@@ -13,7 +13,7 @@
       "id": "paper-inbox@personal-library.local",
       "update_url": "https://updates.invalid/paper-inbox/updates.json",
       "strict_min_version": "9.0",
-      "strict_max_version": "9.0.*"
+      "strict_max_version": "10.0.*"
     }
   }
 }

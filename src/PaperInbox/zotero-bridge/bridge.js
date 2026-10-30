@@ -78,7 +78,10 @@ var PaperInboxBridge = class {
         const bytes = await IOUtils.read(file.path);
         const buf = bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength);
         const maxPages = Math.max(1,Math.min(50,Number(data.maxPages)||12));
-        const result = await Zotero.PDFWorker._enqueue(()=>Zotero.PDFWorker._query('getFulltext',{buf,maxPages},[buf]),true);
+        // Zotero 10 namespaces document-worker PDF actions. Keep extraction
+        // read-only: no temporary library attachment is needed before approval.
+        const action = Number.parseInt(Zotero.version, 10) >= 10 ? 'pdf.getFulltext' : 'getFulltext';
+        const result = await Zotero.PDFWorker._enqueue(()=>Zotero.PDFWorker._query(action,{buf,maxPages},[buf]),true);
         if (await this.controller.sha256(file.path) !== sourceHash) return this.json(409,{error:'FILE_CHANGED'});
         const all = Zotero.Collections.getByLibrary(Zotero.Libraries.userLibraryID,true);
         const paths = all.map(c=>{const parts=[c.name];let parent=c.parentID;while(parent){const p=Zotero.Collections.get(parent);if(!p)break;parts.unshift(p.name);parent=p.parentID;}return parts.join('/');});

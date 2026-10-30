@@ -1,0 +1,238 @@
+{
+  "date": "2026-10-30",
+  "appVersion": "0.5.0",
+  "bridgeVersion": "0.5.1",
+  "zoteroTested": "10.0.6",
+  "compatibility": {
+    "min": "9.0",
+    "max": "10.0.*"
+  },
+  "success": true,
+  "totalChecks": 60,
+  "unitTests": 17,
+  "components": {
+    "success": true,
+    "checks": [
+      {
+        "name": "查重仅计算大小相符的附件哈希",
+        "passed": true
+      },
+      {
+        "name": "递归复用已有通式子类",
+        "passed": true
+      },
+      {
+        "name": "入库同时加入通式根、家族及材料子类并保留原分类",
+        "passed": true
+      },
+      {
+        "name": "空闲桥接不反复写入状态文件",
+        "passed": true
+      }
+    ]
+  },
+  "nativeZotero": {
+    "success": true,
+    "checks": [
+      {
+        "name": "实际运行Zotero10.0.6",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "仅使用独立测试数据库",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "原生安装器通过实际 XPI 兼容性检查",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "原生安装后 0.5.1 插件启用",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "插件启动和本机接口已就绪",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "旧版队列升级后要求重新分析确认",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "完成 PDF 内容提取和模拟 API 分析",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "分析和预览阶段文库保持零条目",
+        "passed": true,
+        "detail": "0"
+      },
+      {
+        "name": "EXE 客户端确认和提交通过",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "相同 PDF 只保留一条文献和附件",
+        "passed": true,
+        "detail": "2"
+      },
+      {
+        "name": "按确认的 API 书目信息建条目",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "完整采用Prompt分类且不追加材料层",
+        "passed": true,
+        "detail": "下载收件箱,按主题,磁关联,物理,磁性,低维磁性,我的阅读,待精读"
+      },
+      {
+        "name": "普通标签与自定义前缀标签均写入",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "原有主题与方法标签已写入",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "复用分类路径且不重复：按主题/磁关联",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "复用分类路径且不重复：物理/磁性/低维磁性",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "复用分类路径且不重复：我的阅读/待精读",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "没有创建旧材料中间层主题路径",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "附件内容与来源一致",
+        "passed": true,
+        "detail": ""
+      },
+      {
+        "name": "实际在 Zotero 阅读器内打开 PDF",
+        "passed": true,
+        "detail": "tab-JmPtLk81"
+      },
+      {
+        "name": "阅读器标签被选中",
+        "passed": true,
+        "detail": "tab-JmPtLk81"
+      },
+      {
+        "name": "两次入库只需至多一次Zotero原生全文索引",
+        "passed": true,
+        "detail": "1"
+      },
+      {
+        "name": "数据库完整性检查",
+        "passed": true,
+        "detail": ""
+      }
+    ]
+  },
+  "client": {
+    "success": true,
+    "checks": [
+      {
+        "name": "现有0.5.0客户端实际连接0.5.1插件",
+        "passed": true
+      },
+      {
+        "name": "只读历史目录接口返回已有CuO材料路径",
+        "passed": true
+      },
+      {
+        "name": "从真实CuO论文提取正文且不入库",
+        "passed": true
+      },
+      {
+        "name": "读取既有材料嵌套分类",
+        "passed": true
+      },
+      {
+        "name": "API路径直接用于分类且不自动追加化学式",
+        "passed": true
+      },
+      {
+        "name": "自定义Prompt随原生提取文本一起发送",
+        "passed": true
+      },
+      {
+        "name": "未确认时拒绝入库",
+        "passed": true
+      },
+      {
+        "name": "插件拒绝unconfirmed",
+        "passed": true
+      },
+      {
+        "name": "插件拒绝legacy-classification",
+        "passed": true
+      },
+      {
+        "name": "插件拒绝invalid-path",
+        "passed": true
+      },
+      {
+        "name": "分析阶段数据库仍为零条目",
+        "passed": true
+      },
+      {
+        "name": "确认后完成材料分类入库",
+        "passed": true
+      },
+      {
+        "name": "PDF已自动在Zotero打开",
+        "passed": true
+      },
+      {
+        "name": "自定义路径提交成功且复用原文献和附件",
+        "passed": true
+      },
+      {
+        "name": "正文分析后文件变化会拦截",
+        "passed": true
+      },
+      {
+        "name": "两个来源文件均保留",
+        "passed": true
+      }
+    ]
+  },
+  "publishedExeUnchanged": true,
+  "realPaidApiCalls": false,
+  "productionPluginInstalled": false,
+  "productionLibraryModified": false,
+  "zotero9ThisRun": "command-selection regression only",
+  "files": {
+    "PaperInbox-Zotero-Bridge-0.5.1.xpi": {
+      "bytes": 13746,
+      "sha256": "31d511869f55e4a554998e3f969327e526a7b1b8132a0beac15f4ea25202d867"
+    },
+    "PaperInbox.exe": {
+      "bytes": 249856,
+      "sha256": "50f8f4ead69f34a5269df746cca87513050d280544a325bd650b5db0b4d08b34"
+    }
+  }
+}

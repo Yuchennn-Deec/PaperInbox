@@ -15,7 +15,7 @@ public static class PromptIntegrationDriver {
   public static int Main(string[] args){try{Run(args[0]).GetAwaiter().GetResult();File.WriteAllText(Path.Combine(args[0],"driver-results.json"),json.Serialize(new{success=true,checks=checks}));return 0;}catch(Exception error){File.WriteAllText(Path.Combine(args[0],"driver-results.json"),json.Serialize(new{success=false,checks=checks,error=error.ToString()}));return 1;}}
   static async Task Run(string root) {
     StateStore store=new StateStore(Path.Combine(root,"shared"));using(BridgeClient client=new BridgeClient(store)) {
-      BridgeStatus ready=await client.Status(new string[0]);Check("实际连接0.5.0材料主题插件",ready.ready&&ready.protocolVersion==3&&ready.version=="0.5.0");
+      BridgeStatus ready=await client.Status(new string[0]);Check("现有0.5.0客户端实际连接0.5.1插件",ready.ready&&ready.protocolVersion==3&&ready.version=="0.5.1");
       DownloadFile info=DownloadFile.FromPath(Path.Combine(root,"files","approved.pdf"));PendingFile file=new PendingFile{Id=Guid.NewGuid().ToString("N"),Path=info.Path,Name=info.Name,Size=info.Size,LastModified=info.LastModified,Status="Pending"};
       ExtractResponse text=await client.Extract(file,12,24000);string leaf="按化学通式/MO（二元氧化物）/CuO";
       CollectionCatalog history=await client.Collections();Check("只读历史目录接口返回已有CuO材料路径",history.collections.Contains(leaf)&&history.collections.Contains("按主题/磁关联"));

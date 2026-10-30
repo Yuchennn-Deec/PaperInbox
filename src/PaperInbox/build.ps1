@@ -19,7 +19,8 @@ $arguments = @('/nologo', '/target:winexe', '/platform:anycpu', '/codepage:65001
 & $compiler @arguments
 if ($LASTEXITCODE -ne 0) { throw 'C# compilation failed.' }
 Add-Type -AssemblyName System.IO.Compression.FileSystem
-$package = Join-Path $destination 'PaperInbox-Zotero-Bridge-0.5.0.xpi'
+$bridgeManifest = Get-Content -LiteralPath (Join-Path $sourceRoot 'zotero-bridge/manifest.json') -Raw -Encoding UTF8 | ConvertFrom-Json
+$package = Join-Path $destination ('PaperInbox-Zotero-Bridge-' + $bridgeManifest.version + '.xpi')
 if (Test-Path -LiteralPath $package) { Remove-Item -LiteralPath $package }
 $archive = [IO.Compression.ZipFile]::Open($package, [IO.Compression.ZipArchiveMode]::Create)
 try {
